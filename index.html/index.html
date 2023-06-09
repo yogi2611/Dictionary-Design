@@ -1,11 +1,36 @@
 <!DOCTYPE html>
-<html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>My DICTIONARY APP</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+
+.word-definition {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping onto multiple lines */
+    justify-content: flex-start;
+}
+
+.word-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: gray;
+    border-radius: 4px;
+    padding: 12px;
+    margin-right: 20px;
+}
+
+.word-details {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.word-details p {
+    margin: 0;
+}
+
+/* ... existing styles ... */
+  </style>
 </head>
 <body>
 	<div class="container">
@@ -62,11 +87,16 @@
 		}
 
 		function searchWord() {
-			var searchInput = document.getElementById("search-input").value;
 			// Code to perform word search
 			// Add your logic here
-			alert("Searching for: " + searchInput);
-		}
+        var searchInput = document.getElementById("search-input").value;
+        alert("Searching for: " + searchInput);
+        var searchUrl = "https://www.google.com/search?q=" + encodeURIComponent(searchInput);
+        window.open(searchUrl, "_blank");
+        
+
+      }
+		
 
 		function deleteWordBox(button) {
 			button.parentNode.remove();
