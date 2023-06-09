@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My DICTIONARY APP</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="left-side">
+				<i class="fas fa-book"></i>
+				<h1>My DICTIONARY APP</h1>
+			</div>
+			<div class="right-side">
+				<button class="history-button" onclick="showHistory()"><i class="fas fa-history"></i> History</button>
+			</div>
+		</header>
+
+		<main>
+			<div class="search-section">
+				<h3>Search for a new word</h3>
+				<div class="search-box">
+					<input type="text" id="search-input" placeholder="Enter a word...">
+					<button id="search-button" onclick="searchWord()">SEARCH</button>
+				</div>
+			</div>
+
+			<div class="word-definition">
+				<div class="word-box">
+					<h4>Word: Hello</h4>
+					<p>A greeting: (salutation) said when meeting someone or acknowledging someone's arrival or presence.</p>
+					<button class="delete-button" onclick="deleteWordBox(this)"><i class="fas fa-trash"></i> Delete</button>
+				</div>
+				<div class="word-box">
+					<h4>Word: Kind</h4>
+					<p>A type, race or category: a group of entities that have common characteristics such that they may be grouped together.</p>
+					<button class="delete-button" onclick="deleteWordBox(this)"><i class="fas fa-trash"></i> Delete</button>
+				</div>
+				<div class="word-box">
+					<h4>Word: Mind</h4>
+					<p>Somebody that embodies certain mental qualities.</p>
+					<button class="delete-button" onclick="deleteWordBox(this)"><i class="fas fa-trash"></i> Delete</button>
+				</div>
+			</div>
+		</main>
+	</div>
+
+	<script>
+		function showHistory() {
+			// Code to display history page
+			// Add your logic here
+			alert("Displaying History Page");
+		}
+
+		function showSearchPage() {
+			// Code to display search page
+			// Add your logic here
+			alert("Displaying Search Page");
+		}
+
+		function searchWord() {
+			var searchInput = document.getElementById("search-input").value;
+			// Code to perform word search
+			// Add your logic here
+			alert("Searching for: " + searchInput);
+		}
+
+		function deleteWordBox(button) {
+			button.parentNode.remove();
+		}
+	</script>
+</body>
+</html>
